@@ -32,7 +32,6 @@ function metaData(){
 ### UPS Label
 
 ```phpregexp
-<?php
 $host = '127.0.0.1:7777';
 $client = new \Carrier\Ups\ServiceClient($host,[
     'credentials' => \Grpc\ChannelCredentials::createInsecure(),
@@ -74,7 +73,7 @@ $req->setShipment($shipment);
 list($reply,$status) = $client->CreateLabel($req,['token' => '']);
 
 /**
- * @var \Carrier\Ups\TrackResponse $reply
+ * @var \Carrier\Ups\CreateLabelResponse $reply
  * @var \Grpc\Status $status
  */
 list($reply,$status) = $client->Track($req,metaData())->wait();
