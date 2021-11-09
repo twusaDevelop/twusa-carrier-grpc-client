@@ -1,0 +1,21 @@
+{
+    "name": "twusa/grpc",
+    "type": "library",
+    "description": "twusa carrier grpc client",
+    "require": {
+        "php": ">=5.6",
+        "grpc/grpc": "^1.39",
+        "google/protobuf": "^3.19"
+    },
+    "authors": [
+        {
+            "name": "twusa",
+            "email": "develop@twusa.cn"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "": "src/"
+        }
+    }
+}
