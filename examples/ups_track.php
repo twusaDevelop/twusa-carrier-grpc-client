@@ -1,5 +1,5 @@
 <?php
-$host = '120.26.63.239:7777';
+$host = '127.0.0.1:7777';
 $client = new \Carrier\Ups\ServiceClient($host,[
     'credentials' => \Grpc\ChannelCredentials::createInsecure(),
 ]);
