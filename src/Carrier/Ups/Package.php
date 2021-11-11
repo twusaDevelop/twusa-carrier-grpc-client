@@ -11,24 +11,24 @@ use Google\Protobuf\Internal\GPBUtil;
 /**
  *包裹
  *
- * Generated from protobuf message <code>pb.Package</code>
+ * Generated from protobuf message <code>ups.Package</code>
  */
 class Package extends \Google\Protobuf\Internal\Message
 {
     /**
-     * Generated from protobuf field <code>.pb.PackageType type = 1;</code>
+     * Generated from protobuf field <code>.ups.PackageType type = 1;</code>
      */
     protected $type = 0;
     /**
-     * Generated from protobuf field <code>.pb.Dimensions dimensions = 2;</code>
+     * Generated from protobuf field <code>.ups.Dimensions dimensions = 2;</code>
      */
     protected $dimensions = null;
     /**
-     * Generated from protobuf field <code>.pb.Weight weight = 3;</code>
+     * Generated from protobuf field <code>.ups.Weight weight = 3;</code>
      */
     protected $weight = null;
     /**
-     * Generated from protobuf field <code>repeated .pb.Reference references = 4;</code>
+     * Generated from protobuf field <code>repeated .ups.Reference references = 4;</code>
      */
     private $references;
 
@@ -50,7 +50,7 @@ class Package extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>.pb.PackageType type = 1;</code>
+     * Generated from protobuf field <code>.ups.PackageType type = 1;</code>
      * @return int
      */
     public function getType()
@@ -59,7 +59,7 @@ class Package extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>.pb.PackageType type = 1;</code>
+     * Generated from protobuf field <code>.ups.PackageType type = 1;</code>
      * @param int $var
      * @return $this
      */
@@ -72,7 +72,7 @@ class Package extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>.pb.Dimensions dimensions = 2;</code>
+     * Generated from protobuf field <code>.ups.Dimensions dimensions = 2;</code>
      * @return \Carrier\Ups\Dimensions|null
      */
     public function getDimensions()
@@ -91,7 +91,7 @@ class Package extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>.pb.Dimensions dimensions = 2;</code>
+     * Generated from protobuf field <code>.ups.Dimensions dimensions = 2;</code>
      * @param \Carrier\Ups\Dimensions $var
      * @return $this
      */
@@ -104,7 +104,7 @@ class Package extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>.pb.Weight weight = 3;</code>
+     * Generated from protobuf field <code>.ups.Weight weight = 3;</code>
      * @return \Carrier\Ups\Weight|null
      */
     public function getWeight()
@@ -123,7 +123,7 @@ class Package extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>.pb.Weight weight = 3;</code>
+     * Generated from protobuf field <code>.ups.Weight weight = 3;</code>
      * @param \Carrier\Ups\Weight $var
      * @return $this
      */
@@ -136,7 +136,7 @@ class Package extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>repeated .pb.Reference references = 4;</code>
+     * Generated from protobuf field <code>repeated .ups.Reference references = 4;</code>
      * @return \Google\Protobuf\Internal\RepeatedField
      */
     public function getReferences()
@@ -145,7 +145,7 @@ class Package extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>repeated .pb.Reference references = 4;</code>
+     * Generated from protobuf field <code>repeated .ups.Reference references = 4;</code>
      * @param \Carrier\Ups\Reference[]|\Google\Protobuf\Internal\RepeatedField $var
      * @return $this
      */

@@ -5,7 +5,7 @@
 namespace Carrier\Ups;
 
 /**
- * Protobuf type <code>pb.Service</code>
+ * Protobuf type <code>ups.Service</code>
  */
 interface ServiceInterface
 {

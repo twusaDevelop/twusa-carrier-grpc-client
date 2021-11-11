@@ -11,7 +11,7 @@ use Google\Protobuf\Internal\GPBUtil;
 /**
  *关联单据号
  *
- * Generated from protobuf message <code>pb.Reference</code>
+ * Generated from protobuf message <code>ups.Reference</code>
  */
 class Reference extends \Google\Protobuf\Internal\Message
 {

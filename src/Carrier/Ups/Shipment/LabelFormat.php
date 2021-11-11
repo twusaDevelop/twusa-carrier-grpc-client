@@ -7,7 +7,7 @@ namespace Carrier\Ups\Shipment;
 use UnexpectedValueException;
 
 /**
- * Protobuf type <code>pb.Shipment.LabelFormat</code>
+ * Protobuf type <code>ups.Shipment.LabelFormat</code>
  */
 class LabelFormat
 {

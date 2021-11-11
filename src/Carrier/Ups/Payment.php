@@ -11,7 +11,7 @@ use Google\Protobuf\Internal\GPBUtil;
 /**
  *支付信息
  *
- * Generated from protobuf message <code>pb.Payment</code>
+ * Generated from protobuf message <code>ups.Payment</code>
  */
 class Payment extends \Google\Protobuf\Internal\Message
 {
@@ -20,11 +20,11 @@ class Payment extends \Google\Protobuf\Internal\Message
      */
     protected $account_number = '';
     /**
-     * Generated from protobuf field <code>.pb.Payment.Type payment_type = 2;</code>
+     * Generated from protobuf field <code>.ups.Payment.Type payment_type = 2;</code>
      */
     protected $payment_type = 0;
     /**
-     * Generated from protobuf field <code>.pb.Address address = 3;</code>
+     * Generated from protobuf field <code>.ups.Address address = 3;</code>
      */
     protected $address = null;
 
@@ -67,7 +67,7 @@ class Payment extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>.pb.Payment.Type payment_type = 2;</code>
+     * Generated from protobuf field <code>.ups.Payment.Type payment_type = 2;</code>
      * @return int
      */
     public function getPaymentType()
@@ -76,7 +76,7 @@ class Payment extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>.pb.Payment.Type payment_type = 2;</code>
+     * Generated from protobuf field <code>.ups.Payment.Type payment_type = 2;</code>
      * @param int $var
      * @return $this
      */
@@ -89,7 +89,7 @@ class Payment extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>.pb.Address address = 3;</code>
+     * Generated from protobuf field <code>.ups.Address address = 3;</code>
      * @return \Carrier\Ups\Address|null
      */
     public function getAddress()
@@ -108,7 +108,7 @@ class Payment extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>.pb.Address address = 3;</code>
+     * Generated from protobuf field <code>.ups.Address address = 3;</code>
      * @param \Carrier\Ups\Address $var
      * @return $this
      */

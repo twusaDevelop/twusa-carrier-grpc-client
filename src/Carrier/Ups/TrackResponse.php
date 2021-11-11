@@ -9,7 +9,7 @@ use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
 
 /**
- * Generated from protobuf message <code>pb.TrackResponse</code>
+ * Generated from protobuf message <code>ups.TrackResponse</code>
  */
 class TrackResponse extends \Google\Protobuf\Internal\Message
 {
@@ -30,7 +30,7 @@ class TrackResponse extends \Google\Protobuf\Internal\Message
      */
     protected $pickup_date = '';
     /**
-     * Generated from protobuf field <code>repeated .pb.TrackActivity nodes = 5;</code>
+     * Generated from protobuf field <code>repeated .ups.TrackActivity nodes = 5;</code>
      */
     private $nodes;
 
@@ -141,7 +141,7 @@ class TrackResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>repeated .pb.TrackActivity nodes = 5;</code>
+     * Generated from protobuf field <code>repeated .ups.TrackActivity nodes = 5;</code>
      * @return \Google\Protobuf\Internal\RepeatedField
      */
     public function getNodes()
@@ -150,7 +150,7 @@ class TrackResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>repeated .pb.TrackActivity nodes = 5;</code>
+     * Generated from protobuf field <code>repeated .ups.TrackActivity nodes = 5;</code>
      * @param \Carrier\Ups\TrackActivity[]|\Google\Protobuf\Internal\RepeatedField $var
      * @return $this
      */

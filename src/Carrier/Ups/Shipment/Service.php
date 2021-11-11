@@ -7,7 +7,7 @@ namespace Carrier\Ups\Shipment;
 use UnexpectedValueException;
 
 /**
- * Protobuf type <code>pb.Shipment.Service</code>
+ * Protobuf type <code>ups.Shipment.Service</code>
  */
 class Service
 {

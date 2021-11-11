@@ -11,7 +11,7 @@ use Google\Protobuf\Internal\GPBUtil;
 /**
  *值类型
  *
- * Generated from protobuf message <code>pb.Value</code>
+ * Generated from protobuf message <code>ups.Value</code>
  */
 class Value extends \Google\Protobuf\Internal\Message
 {

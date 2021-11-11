@@ -9,36 +9,36 @@ use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
 
 /**
- * Generated from protobuf message <code>pb.Shipment</code>
+ * Generated from protobuf message <code>ups.Shipment</code>
  */
 class Shipment extends \Google\Protobuf\Internal\Message
 {
     /**
-     * Generated from protobuf field <code>.pb.Location shipper = 1;</code>
+     * Generated from protobuf field <code>.ups.Location shipper = 1;</code>
      */
     protected $shipper = null;
     /**
-     * Generated from protobuf field <code>.pb.Location ship_from = 2;</code>
+     * Generated from protobuf field <code>.ups.Location ship_from = 2;</code>
      */
     protected $ship_from = null;
     /**
-     * Generated from protobuf field <code>.pb.Location ship_to = 3;</code>
+     * Generated from protobuf field <code>.ups.Location ship_to = 3;</code>
      */
     protected $ship_to = null;
     /**
-     * Generated from protobuf field <code>.pb.Payment payment = 4;</code>
+     * Generated from protobuf field <code>.ups.Payment payment = 4;</code>
      */
     protected $payment = null;
     /**
-     * Generated from protobuf field <code>.pb.Shipment.Service service = 6;</code>
+     * Generated from protobuf field <code>.ups.Shipment.Service service = 6;</code>
      */
     protected $service = 0;
     /**
-     * Generated from protobuf field <code>.pb.Package package = 7;</code>
+     * Generated from protobuf field <code>.ups.Package package = 7;</code>
      */
     protected $package = null;
     /**
-     * Generated from protobuf field <code>.pb.Shipment.LabelFormat label_format = 8;</code>
+     * Generated from protobuf field <code>.ups.Shipment.LabelFormat label_format = 8;</code>
      */
     protected $label_format = 0;
 
@@ -63,7 +63,7 @@ class Shipment extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>.pb.Location shipper = 1;</code>
+     * Generated from protobuf field <code>.ups.Location shipper = 1;</code>
      * @return \Carrier\Ups\Location|null
      */
     public function getShipper()
@@ -82,7 +82,7 @@ class Shipment extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>.pb.Location shipper = 1;</code>
+     * Generated from protobuf field <code>.ups.Location shipper = 1;</code>
      * @param \Carrier\Ups\Location $var
      * @return $this
      */
@@ -95,7 +95,7 @@ class Shipment extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>.pb.Location ship_from = 2;</code>
+     * Generated from protobuf field <code>.ups.Location ship_from = 2;</code>
      * @return \Carrier\Ups\Location|null
      */
     public function getShipFrom()
@@ -114,7 +114,7 @@ class Shipment extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>.pb.Location ship_from = 2;</code>
+     * Generated from protobuf field <code>.ups.Location ship_from = 2;</code>
      * @param \Carrier\Ups\Location $var
      * @return $this
      */
@@ -127,7 +127,7 @@ class Shipment extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>.pb.Location ship_to = 3;</code>
+     * Generated from protobuf field <code>.ups.Location ship_to = 3;</code>
      * @return \Carrier\Ups\Location|null
      */
     public function getShipTo()
@@ -146,7 +146,7 @@ class Shipment extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>.pb.Location ship_to = 3;</code>
+     * Generated from protobuf field <code>.ups.Location ship_to = 3;</code>
      * @param \Carrier\Ups\Location $var
      * @return $this
      */
@@ -159,7 +159,7 @@ class Shipment extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>.pb.Payment payment = 4;</code>
+     * Generated from protobuf field <code>.ups.Payment payment = 4;</code>
      * @return \Carrier\Ups\Payment|null
      */
     public function getPayment()
@@ -178,7 +178,7 @@ class Shipment extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>.pb.Payment payment = 4;</code>
+     * Generated from protobuf field <code>.ups.Payment payment = 4;</code>
      * @param \Carrier\Ups\Payment $var
      * @return $this
      */
@@ -191,7 +191,7 @@ class Shipment extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>.pb.Shipment.Service service = 6;</code>
+     * Generated from protobuf field <code>.ups.Shipment.Service service = 6;</code>
      * @return int
      */
     public function getService()
@@ -200,7 +200,7 @@ class Shipment extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>.pb.Shipment.Service service = 6;</code>
+     * Generated from protobuf field <code>.ups.Shipment.Service service = 6;</code>
      * @param int $var
      * @return $this
      */
@@ -213,7 +213,7 @@ class Shipment extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>.pb.Package package = 7;</code>
+     * Generated from protobuf field <code>.ups.Package package = 7;</code>
      * @return \Carrier\Ups\Package|null
      */
     public function getPackage()
@@ -232,7 +232,7 @@ class Shipment extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>.pb.Package package = 7;</code>
+     * Generated from protobuf field <code>.ups.Package package = 7;</code>
      * @param \Carrier\Ups\Package $var
      * @return $this
      */
@@ -245,7 +245,7 @@ class Shipment extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>.pb.Shipment.LabelFormat label_format = 8;</code>
+     * Generated from protobuf field <code>.ups.Shipment.LabelFormat label_format = 8;</code>
      * @return int
      */
     public function getLabelFormat()
@@ -254,7 +254,7 @@ class Shipment extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>.pb.Shipment.LabelFormat label_format = 8;</code>
+     * Generated from protobuf field <code>.ups.Shipment.LabelFormat label_format = 8;</code>
      * @param int $var
      * @return $this
      */

@@ -11,7 +11,7 @@ use Google\Protobuf\Internal\GPBUtil;
 /**
  *授权信息
  *
- * Generated from protobuf message <code>pb.Auth</code>
+ * Generated from protobuf message <code>ups.Auth</code>
  */
 class Auth extends \Google\Protobuf\Internal\Message
 {

@@ -11,7 +11,7 @@ use Google\Protobuf\Internal\GPBUtil;
 /**
  *地址
  *
- * Generated from protobuf message <code>pb.Address</code>
+ * Generated from protobuf message <code>ups.Address</code>
  */
 class Address extends \Google\Protobuf\Internal\Message
 {

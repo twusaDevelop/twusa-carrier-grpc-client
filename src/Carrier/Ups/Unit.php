@@ -7,7 +7,7 @@ namespace Carrier\Ups;
 use UnexpectedValueException;
 
 /**
- * Protobuf type <code>pb.Unit</code>
+ * Protobuf type <code>ups.Unit</code>
  */
 class Unit
 {

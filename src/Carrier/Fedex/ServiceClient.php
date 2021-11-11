@@ -1,7 +1,7 @@
 <?php
 // GENERATED CODE -- DO NOT EDIT!
 
-namespace Carrier\Ups;
+namespace Carrier\Fedex;
 
 /**
  */
@@ -17,30 +17,30 @@ class ServiceClient extends \Grpc\BaseStub {
     }
 
     /**
-     * @param \Carrier\Ups\CreateLabelRequest $argument input argument
+     * @param \Carrier\Fedex\CreateShipmentRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
      * @return \Grpc\UnaryCall
      */
-    public function CreateLabel(\Carrier\Ups\CreateLabelRequest $argument,
+    public function CreateShipment(\Carrier\Fedex\CreateShipmentRequest $argument,
       $metadata = [], $options = []) {
-        return $this->_simpleRequest('/ups.Service/CreateLabel',
+        return $this->_simpleRequest('/fedex.Service/CreateShipment',
         $argument,
-        ['\Carrier\Ups\CreateLabelResponse', 'decode'],
+        ['\Carrier\Fedex\CreateShipmentResponse', 'decode'],
         $metadata, $options);
     }
 
     /**
-     * @param \Carrier\Ups\TrackRequest $argument input argument
+     * @param \Carrier\Fedex\TrackRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
      * @return \Grpc\UnaryCall
      */
-    public function Track(\Carrier\Ups\TrackRequest $argument,
+    public function Track(\Carrier\Fedex\TrackRequest $argument,
       $metadata = [], $options = []) {
-        return $this->_simpleRequest('/ups.Service/Track',
+        return $this->_simpleRequest('/fedex.Service/Track',
         $argument,
-        ['\Carrier\Ups\TrackResponse', 'decode'],
+        ['\Carrier\Fedex\TrackResponse', 'decode'],
         $metadata, $options);
     }
 

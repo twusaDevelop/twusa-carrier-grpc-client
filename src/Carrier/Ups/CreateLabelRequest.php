@@ -9,16 +9,16 @@ use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
 
 /**
- * Generated from protobuf message <code>pb.CreateLabelRequest</code>
+ * Generated from protobuf message <code>ups.CreateLabelRequest</code>
  */
 class CreateLabelRequest extends \Google\Protobuf\Internal\Message
 {
     /**
-     * Generated from protobuf field <code>.pb.Auth authorization = 1;</code>
+     * Generated from protobuf field <code>.ups.Auth authorization = 1;</code>
      */
     protected $authorization = null;
     /**
-     * Generated from protobuf field <code>.pb.Shipment shipment = 2;</code>
+     * Generated from protobuf field <code>.ups.Shipment shipment = 2;</code>
      */
     protected $shipment = null;
 
@@ -38,7 +38,7 @@ class CreateLabelRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>.pb.Auth authorization = 1;</code>
+     * Generated from protobuf field <code>.ups.Auth authorization = 1;</code>
      * @return \Carrier\Ups\Auth|null
      */
     public function getAuthorization()
@@ -57,7 +57,7 @@ class CreateLabelRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>.pb.Auth authorization = 1;</code>
+     * Generated from protobuf field <code>.ups.Auth authorization = 1;</code>
      * @param \Carrier\Ups\Auth $var
      * @return $this
      */
@@ -70,7 +70,7 @@ class CreateLabelRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>.pb.Shipment shipment = 2;</code>
+     * Generated from protobuf field <code>.ups.Shipment shipment = 2;</code>
      * @return \Carrier\Ups\Shipment|null
      */
     public function getShipment()
@@ -89,7 +89,7 @@ class CreateLabelRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>.pb.Shipment shipment = 2;</code>
+     * Generated from protobuf field <code>.ups.Shipment shipment = 2;</code>
      * @param \Carrier\Ups\Shipment $var
      * @return $this
      */

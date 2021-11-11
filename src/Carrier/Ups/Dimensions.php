@@ -11,7 +11,7 @@ use Google\Protobuf\Internal\GPBUtil;
 /**
  *尺寸
  *
- * Generated from protobuf message <code>pb.Dimensions</code>
+ * Generated from protobuf message <code>ups.Dimensions</code>
  */
 class Dimensions extends \Google\Protobuf\Internal\Message
 {
@@ -28,7 +28,7 @@ class Dimensions extends \Google\Protobuf\Internal\Message
      */
     protected $height = 0.0;
     /**
-     * Generated from protobuf field <code>.pb.Unit unit = 4;</code>
+     * Generated from protobuf field <code>.ups.Unit unit = 4;</code>
      */
     protected $unit = 0;
 
@@ -116,7 +116,7 @@ class Dimensions extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>.pb.Unit unit = 4;</code>
+     * Generated from protobuf field <code>.ups.Unit unit = 4;</code>
      * @return int
      */
     public function getUnit()
@@ -125,7 +125,7 @@ class Dimensions extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>.pb.Unit unit = 4;</code>
+     * Generated from protobuf field <code>.ups.Unit unit = 4;</code>
      * @param int $var
      * @return $this
      */

@@ -11,7 +11,7 @@ use Google\Protobuf\Internal\GPBUtil;
 /**
  *地点
  *
- * Generated from protobuf message <code>pb.Location</code>
+ * Generated from protobuf message <code>ups.Location</code>
  */
 class Location extends \Google\Protobuf\Internal\Message
 {
@@ -40,7 +40,7 @@ class Location extends \Google\Protobuf\Internal\Message
      */
     protected $shipper_number = '';
     /**
-     * Generated from protobuf field <code>.pb.Address address = 7;</code>
+     * Generated from protobuf field <code>.ups.Address address = 7;</code>
      */
     protected $address = null;
 
@@ -197,7 +197,7 @@ class Location extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>.pb.Address address = 7;</code>
+     * Generated from protobuf field <code>.ups.Address address = 7;</code>
      * @return \Carrier\Ups\Address|null
      */
     public function getAddress()
@@ -216,7 +216,7 @@ class Location extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>.pb.Address address = 7;</code>
+     * Generated from protobuf field <code>.ups.Address address = 7;</code>
      * @param \Carrier\Ups\Address $var
      * @return $this
      */
