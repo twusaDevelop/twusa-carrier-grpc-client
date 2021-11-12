@@ -7,6 +7,7 @@
  */
 
 use Carrier\Fedex as Fedex;
+use Grpc\Status;
 
 $host   = '127.0.0.1:7777';
 $client = new Fedex\ServiceClient($host, [
@@ -23,4 +24,17 @@ $reqTrack = new Fedex\TrackRequest();
 $reqTrack->setAuthorization($auth);
 $reqTrack->setTrackNumber("283527452813");
 
-list($reply, $status) = $client->Track($reqTrack);
+/**
+ * @var Fedex\TrackResponse $reply
+ * @var Status $status
+ */
+list($reply, $status) = $client->Track($reqTrack)->wait();
+if ($status->code != \Grpc\STATUS_OK) {
+    echo "{$status->detail}\n";
+    return;
+}
+
+function metaData()
+{
+    return ['token' => 'KDA88999'];
+}

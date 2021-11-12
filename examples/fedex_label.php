@@ -7,6 +7,7 @@
  */
 
 use Carrier\Fedex as Fedex;
+use Grpc\Status;
 
 $host   = '127.0.0.1:7777';
 $client = new Fedex\ServiceClient($host, [
@@ -85,4 +86,17 @@ $req->setRequestedShipment($requestShipment);
 $req->setLabelResponseOptions(Fedex\CreateShipmentRequest\LabelResponseOptions::LABEL);
 $req->setAccountNumber("777777777");
 
-list($reply, $status) = $client->CreateShipment($req);
+/**
+ * @var Fedex\CreateShipmentResponse $reply
+ * @var Status $status
+ */
+list($reply, $status) = $client->CreateShipment($req)->wait();
+if ($status->code != \Grpc\STATUS_OK) {
+    echo "{$status->detail}\n";
+    return;
+}
+
+function metaData()
+{
+    return ['token' => 'KDA88999'];
+}
