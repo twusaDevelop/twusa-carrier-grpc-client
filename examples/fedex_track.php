@@ -28,7 +28,7 @@ $reqTrack->setTrackNumber("283527452813");
  * @var Fedex\TrackResponse $reply
  * @var Status $status
  */
-list($reply, $status) = $client->Track($reqTrack)->wait();
+list($reply, $status) = $client->Track($reqTrack, metaData())->wait();
 if ($status->code != \Grpc\STATUS_OK) {
     echo "{$status->detail}\n";
     return;

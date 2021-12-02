@@ -90,7 +90,7 @@ $req->setAccountNumber("777777777");
  * @var Fedex\CreateShipmentResponse $reply
  * @var Status $status
  */
-list($reply, $status) = $client->CreateShipment($req)->wait();
+list($reply, $status) = $client->CreateShipment($req, metaData())->wait();
 if ($status->code != \Grpc\STATUS_OK) {
     echo "{$status->detail}\n";
     return;
