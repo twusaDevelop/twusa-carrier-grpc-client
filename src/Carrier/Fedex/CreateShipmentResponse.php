@@ -19,6 +19,10 @@ class CreateShipmentResponse extends \Google\Protobuf\Internal\Message
      * Generated from protobuf field <code>string label = 1;</code>
      */
     protected $label = '';
+    /**
+     * Generated from protobuf field <code>string tracking_number = 2;</code>
+     */
+    protected $tracking_number = '';
 
     /**
      * Constructor.
@@ -27,6 +31,7 @@ class CreateShipmentResponse extends \Google\Protobuf\Internal\Message
      *     Optional. Data for populating the Message object.
      *
      *     @type string $label
+     *     @type string $tracking_number
      * }
      */
     public function __construct($data = NULL) {
@@ -52,6 +57,28 @@ class CreateShipmentResponse extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkString($var, True);
         $this->label = $var;
+
+        return $this;
+    }
+
+    /**
+     * Generated from protobuf field <code>string tracking_number = 2;</code>
+     * @return string
+     */
+    public function getTrackingNumber()
+    {
+        return $this->tracking_number;
+    }
+
+    /**
+     * Generated from protobuf field <code>string tracking_number = 2;</code>
+     * @param string $var
+     * @return $this
+     */
+    public function setTrackingNumber($var)
+    {
+        GPBUtil::checkString($var, True);
+        $this->tracking_number = $var;
 
         return $this;
     }
