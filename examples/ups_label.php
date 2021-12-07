@@ -37,15 +37,15 @@ $req->setAuthorization($auth);
 $req->setShipment($shipment);
 $req->setAuthorization($auth);
 $req->setShipment($shipment);
-list($reply,$status) = $client->CreateLabel($req,['token' => '']);
 
 /**
  * @var \Carrier\Ups\CreateLabelResponse $reply
  * @var \Grpc\Status $status
  */
-list($reply,$status) = $client->Track($req,metaData())->wait();
+list($reply,$status) = $client->CreateLabel($req,['token' => '']);
 if($status->code != \Grpc\STATUS_OK){
     echo "{$status->detail}\n";
+    $reply->getTrackingNumber();
     return;
 }
 
