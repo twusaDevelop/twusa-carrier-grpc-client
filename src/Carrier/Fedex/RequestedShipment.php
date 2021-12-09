@@ -40,27 +40,33 @@ class RequestedShipment extends \Google\Protobuf\Internal\Message
      */
     protected $service_type = 0;
     /**
+     * SMART POST服务需要
+     *
+     * Generated from protobuf field <code>.fedex.SmartPostInfoDetail SmartPostInfoDetail = 5;</code>
+     */
+    protected $SmartPostInfoDetail = null;
+    /**
      * 指定使用的包装(默认YOUR_PACKAGING)
      *
-     * Generated from protobuf field <code>.fedex.RequestedShipment.PackagingType packaging_type = 5;</code>
+     * Generated from protobuf field <code>.fedex.RequestedShipment.PackagingType packaging_type = 6;</code>
      */
     protected $packaging_type = 0;
     /**
      * 指定支付细节，指定支付联邦快递提供运输服务的方法和方式。
      *
-     * Generated from protobuf field <code>.fedex.ShippingChargesPayment shipping_charges_payment = 6;</code>
+     * Generated from protobuf field <code>.fedex.ShippingChargesPayment shipping_charges_payment = 7;</code>
      */
     protected $shipping_charges_payment = null;
     /**
      * 指示使用的标签规范细节
      *
-     * Generated from protobuf field <code>.fedex.LabelSpecification label_specification = 7;</code>
+     * Generated from protobuf field <code>.fedex.LabelSpecification label_specification = 8;</code>
      */
     protected $label_specification = null;
     /**
      * 一个或多个包装属性描述
      *
-     * Generated from protobuf field <code>repeated .fedex.RequestedPackageLineItems requested_package_line_items = 8;</code>
+     * Generated from protobuf field <code>repeated .fedex.RequestedPackageLineItems requested_package_line_items = 9;</code>
      */
     private $requested_package_line_items;
 
@@ -78,6 +84,8 @@ class RequestedShipment extends \Google\Protobuf\Internal\Message
      *           指定提货方式
      *     @type int $service_type
      *           指定服务类型
+     *     @type \Carrier\Fedex\SmartPostInfoDetail $SmartPostInfoDetail
+     *           SMART POST服务需要
      *     @type int $packaging_type
      *           指定使用的包装(默认YOUR_PACKAGING)
      *     @type \Carrier\Fedex\ShippingChargesPayment $shipping_charges_payment
@@ -208,9 +216,45 @@ class RequestedShipment extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     * SMART POST服务需要
+     *
+     * Generated from protobuf field <code>.fedex.SmartPostInfoDetail SmartPostInfoDetail = 5;</code>
+     * @return \Carrier\Fedex\SmartPostInfoDetail|null
+     */
+    public function getSmartPostInfoDetail()
+    {
+        return $this->SmartPostInfoDetail;
+    }
+
+    public function hasSmartPostInfoDetail()
+    {
+        return isset($this->SmartPostInfoDetail);
+    }
+
+    public function clearSmartPostInfoDetail()
+    {
+        unset($this->SmartPostInfoDetail);
+    }
+
+    /**
+     * SMART POST服务需要
+     *
+     * Generated from protobuf field <code>.fedex.SmartPostInfoDetail SmartPostInfoDetail = 5;</code>
+     * @param \Carrier\Fedex\SmartPostInfoDetail $var
+     * @return $this
+     */
+    public function setSmartPostInfoDetail($var)
+    {
+        GPBUtil::checkMessage($var, \Carrier\Fedex\SmartPostInfoDetail::class);
+        $this->SmartPostInfoDetail = $var;
+
+        return $this;
+    }
+
+    /**
      * 指定使用的包装(默认YOUR_PACKAGING)
      *
-     * Generated from protobuf field <code>.fedex.RequestedShipment.PackagingType packaging_type = 5;</code>
+     * Generated from protobuf field <code>.fedex.RequestedShipment.PackagingType packaging_type = 6;</code>
      * @return int
      */
     public function getPackagingType()
@@ -221,7 +265,7 @@ class RequestedShipment extends \Google\Protobuf\Internal\Message
     /**
      * 指定使用的包装(默认YOUR_PACKAGING)
      *
-     * Generated from protobuf field <code>.fedex.RequestedShipment.PackagingType packaging_type = 5;</code>
+     * Generated from protobuf field <code>.fedex.RequestedShipment.PackagingType packaging_type = 6;</code>
      * @param int $var
      * @return $this
      */
@@ -236,7 +280,7 @@ class RequestedShipment extends \Google\Protobuf\Internal\Message
     /**
      * 指定支付细节，指定支付联邦快递提供运输服务的方法和方式。
      *
-     * Generated from protobuf field <code>.fedex.ShippingChargesPayment shipping_charges_payment = 6;</code>
+     * Generated from protobuf field <code>.fedex.ShippingChargesPayment shipping_charges_payment = 7;</code>
      * @return \Carrier\Fedex\ShippingChargesPayment|null
      */
     public function getShippingChargesPayment()
@@ -257,7 +301,7 @@ class RequestedShipment extends \Google\Protobuf\Internal\Message
     /**
      * 指定支付细节，指定支付联邦快递提供运输服务的方法和方式。
      *
-     * Generated from protobuf field <code>.fedex.ShippingChargesPayment shipping_charges_payment = 6;</code>
+     * Generated from protobuf field <code>.fedex.ShippingChargesPayment shipping_charges_payment = 7;</code>
      * @param \Carrier\Fedex\ShippingChargesPayment $var
      * @return $this
      */
@@ -272,7 +316,7 @@ class RequestedShipment extends \Google\Protobuf\Internal\Message
     /**
      * 指示使用的标签规范细节
      *
-     * Generated from protobuf field <code>.fedex.LabelSpecification label_specification = 7;</code>
+     * Generated from protobuf field <code>.fedex.LabelSpecification label_specification = 8;</code>
      * @return \Carrier\Fedex\LabelSpecification|null
      */
     public function getLabelSpecification()
@@ -293,7 +337,7 @@ class RequestedShipment extends \Google\Protobuf\Internal\Message
     /**
      * 指示使用的标签规范细节
      *
-     * Generated from protobuf field <code>.fedex.LabelSpecification label_specification = 7;</code>
+     * Generated from protobuf field <code>.fedex.LabelSpecification label_specification = 8;</code>
      * @param \Carrier\Fedex\LabelSpecification $var
      * @return $this
      */
@@ -308,7 +352,7 @@ class RequestedShipment extends \Google\Protobuf\Internal\Message
     /**
      * 一个或多个包装属性描述
      *
-     * Generated from protobuf field <code>repeated .fedex.RequestedPackageLineItems requested_package_line_items = 8;</code>
+     * Generated from protobuf field <code>repeated .fedex.RequestedPackageLineItems requested_package_line_items = 9;</code>
      * @return \Google\Protobuf\Internal\RepeatedField
      */
     public function getRequestedPackageLineItems()
@@ -319,7 +363,7 @@ class RequestedShipment extends \Google\Protobuf\Internal\Message
     /**
      * 一个或多个包装属性描述
      *
-     * Generated from protobuf field <code>repeated .fedex.RequestedPackageLineItems requested_package_line_items = 8;</code>
+     * Generated from protobuf field <code>repeated .fedex.RequestedPackageLineItems requested_package_line_items = 9;</code>
      * @param \Carrier\Fedex\RequestedPackageLineItems[]|\Google\Protobuf\Internal\RepeatedField $var
      * @return $this
      */
