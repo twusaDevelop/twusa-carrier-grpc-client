@@ -81,6 +81,14 @@ $requestShipment->setShippingChargesPayment($shippingChargesPayment);
 $requestShipment->setLabelSpecification($labelSpecification);
 $requestShipment->setRequestedPackageLineItems($packageLineItems);
 
+// 指定Smart Post发货详细信息
+if ($requestShipment->getServiceType() == Fedex\RequestedShipment\ServiceType::SMART_POST) {
+    $smartPostInfoDetail = new Fedex\SmartPostInfoDetail();
+    $smartPostInfoDetail->setHubId("5531");
+    $smartPostInfoDetail->setIndicia(Fedex\SmartPostInfoDetail\Indicia::PARCEL_SELECT);
+    $requestShipment->setSmartPostInfoDetail($smartPostInfoDetail);
+}
+
 // 创建面单请求
 $req = new Fedex\CreateShipmentRequest();
 $req->setAuthorization($auth);
