@@ -41,7 +41,8 @@ $recipientAddress->setCity("Collierville");
 $recipientAddress->setState("TN");
 $recipientAddress->setPostalCode("38017");
 $recipientAddress->setCountryCode("US");
-$recipientAddress->setResidential(true);
+// 如果ServiceType是GROUND_HOME_DELIVERY，此项必须设置为true，否则不传
+$recipientAddress->setResidential(true); // 是否是家庭地址
 $recipientContract = new Fedex\Contact();
 $recipientContract->setPersonName("John Taylor");
 $recipientContract->setPhoneNumber("1234567890");
@@ -53,6 +54,7 @@ $recipients = [$recipient];
 // 支付细节
 $shippingChargesPayment = new Fedex\ShippingChargesPayment();
 $shippingChargesPayment->setPaymentType(Fedex\ShippingChargesPayment\PaymentType::SENDER);
+// 如果PaymentType是非sender，accountNumber必传，否则不传
 $shippingChargesPayment->setAccountNumber("777777777");
 
 // 面单细节
@@ -73,7 +75,7 @@ $requestShipment = new Fedex\RequestedShipment();
 $requestShipment->setShipper($shipper);
 $requestShipment->setRecipients($recipients);
 $requestShipment->setPickupType(Fedex\RequestedShipment\PickupType::CONTACT_FEDEX_TO_SCHEDULE);
-$requestShipment->setServiceType(Fedex\RequestedShipment\ServiceType::FEDEX_GROUND);
+$requestShipment->setServiceType(Fedex\RequestedShipment\ServiceType::GROUND_HOME_DELIVERY);
 $requestShipment->setPackagingType(Fedex\RequestedShipment\PackagingType::YOUR_PACKAGING);
 $requestShipment->setShippingChargesPayment($shippingChargesPayment);
 $requestShipment->setLabelSpecification($labelSpecification);
