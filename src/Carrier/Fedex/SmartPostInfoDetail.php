@@ -25,6 +25,10 @@ class SmartPostInfoDetail extends \Google\Protobuf\Internal\Message
      * Generated from protobuf field <code>.fedex.SmartPostInfoDetail.Indicia indicia = 2;</code>
      */
     protected $indicia = 0;
+    /**
+     * Generated from protobuf field <code>.fedex.SmartPostInfoDetail.AncillaryEndorsement ancillaryEndorsement = 3;</code>
+     */
+    protected $ancillaryEndorsement = 0;
 
     /**
      * Constructor.
@@ -35,6 +39,7 @@ class SmartPostInfoDetail extends \Google\Protobuf\Internal\Message
      *     @type string $hub_id
      *           指定用于智能端口发货的四位数字集线器ID值。
      *     @type int $indicia
+     *     @type int $ancillaryEndorsement
      * }
      */
     public function __construct($data = NULL) {
@@ -86,6 +91,28 @@ class SmartPostInfoDetail extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkEnum($var, \Carrier\Fedex\SmartPostInfoDetail\Indicia::class);
         $this->indicia = $var;
+
+        return $this;
+    }
+
+    /**
+     * Generated from protobuf field <code>.fedex.SmartPostInfoDetail.AncillaryEndorsement ancillaryEndorsement = 3;</code>
+     * @return int
+     */
+    public function getAncillaryEndorsement()
+    {
+        return $this->ancillaryEndorsement;
+    }
+
+    /**
+     * Generated from protobuf field <code>.fedex.SmartPostInfoDetail.AncillaryEndorsement ancillaryEndorsement = 3;</code>
+     * @param int $var
+     * @return $this
+     */
+    public function setAncillaryEndorsement($var)
+    {
+        GPBUtil::checkEnum($var, \Carrier\Fedex\SmartPostInfoDetail\AncillaryEndorsement::class);
+        $this->ancillaryEndorsement = $var;
 
         return $this;
     }

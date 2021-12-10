@@ -16,9 +16,17 @@ use Google\Protobuf\Internal\GPBUtil;
 class RequestedPackageLineItems extends \Google\Protobuf\Internal\Message
 {
     /**
+     * 重量
+     *
      * Generated from protobuf field <code>.fedex.Weight weight = 1;</code>
      */
     protected $weight = null;
+    /**
+     * 客户引用
+     *
+     * Generated from protobuf field <code>repeated .fedex.CustomerReferences customer_references = 2;</code>
+     */
+    private $customer_references;
 
     /**
      * Constructor.
@@ -27,6 +35,9 @@ class RequestedPackageLineItems extends \Google\Protobuf\Internal\Message
      *     Optional. Data for populating the Message object.
      *
      *     @type \Carrier\Fedex\Weight $weight
+     *           重量
+     *     @type \Carrier\Fedex\CustomerReferences[]|\Google\Protobuf\Internal\RepeatedField $customer_references
+     *           客户引用
      * }
      */
     public function __construct($data = NULL) {
@@ -35,6 +46,8 @@ class RequestedPackageLineItems extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     * 重量
+     *
      * Generated from protobuf field <code>.fedex.Weight weight = 1;</code>
      * @return \Carrier\Fedex\Weight|null
      */
@@ -54,6 +67,8 @@ class RequestedPackageLineItems extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     * 重量
+     *
      * Generated from protobuf field <code>.fedex.Weight weight = 1;</code>
      * @param \Carrier\Fedex\Weight $var
      * @return $this
@@ -62,6 +77,32 @@ class RequestedPackageLineItems extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkMessage($var, \Carrier\Fedex\Weight::class);
         $this->weight = $var;
+
+        return $this;
+    }
+
+    /**
+     * 客户引用
+     *
+     * Generated from protobuf field <code>repeated .fedex.CustomerReferences customer_references = 2;</code>
+     * @return \Google\Protobuf\Internal\RepeatedField
+     */
+    public function getCustomerReferences()
+    {
+        return $this->customer_references;
+    }
+
+    /**
+     * 客户引用
+     *
+     * Generated from protobuf field <code>repeated .fedex.CustomerReferences customer_references = 2;</code>
+     * @param \Carrier\Fedex\CustomerReferences[]|\Google\Protobuf\Internal\RepeatedField $var
+     * @return $this
+     */
+    public function setCustomerReferences($var)
+    {
+        $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::MESSAGE, \Carrier\Fedex\CustomerReferences::class);
+        $this->customer_references = $arr;
 
         return $this;
     }
