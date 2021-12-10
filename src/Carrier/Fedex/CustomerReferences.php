@@ -19,6 +19,10 @@ class CustomerReferences extends \Google\Protobuf\Internal\Message
      * Generated from protobuf field <code>.fedex.CustomerReferences.CustomerReferenceType customer_reference_type = 1;</code>
      */
     protected $customer_reference_type = 0;
+    /**
+     * Generated from protobuf field <code>string value = 2;</code>
+     */
+    protected $value = '';
 
     /**
      * Constructor.
@@ -27,6 +31,7 @@ class CustomerReferences extends \Google\Protobuf\Internal\Message
      *     Optional. Data for populating the Message object.
      *
      *     @type int $customer_reference_type
+     *     @type string $value
      * }
      */
     public function __construct($data = NULL) {
@@ -52,6 +57,28 @@ class CustomerReferences extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkEnum($var, \Carrier\Fedex\CustomerReferences\CustomerReferenceType::class);
         $this->customer_reference_type = $var;
+
+        return $this;
+    }
+
+    /**
+     * Generated from protobuf field <code>string value = 2;</code>
+     * @return string
+     */
+    public function getValue()
+    {
+        return $this->value;
+    }
+
+    /**
+     * Generated from protobuf field <code>string value = 2;</code>
+     * @param string $var
+     * @return $this
+     */
+    public function setValue($var)
+    {
+        GPBUtil::checkString($var, True);
+        $this->value = $var;
 
         return $this;
     }

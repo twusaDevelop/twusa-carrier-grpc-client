@@ -62,12 +62,18 @@ $labelSpecification = new Fedex\LabelSpecification();
 $labelSpecification->setImageType(Fedex\LabelSpecification\ImageType::PNG);
 $labelSpecification->setLabelStockType(Fedex\LabelSpecification\LabelStockType::PAPER_4X6);
 
-// 包装细节
+// 包裹重量
 $weight = new Fedex\Weight();
 $weight->setUnit(Fedex\Weight\Unit::LB);
 $weight->setValue(12.22);
+// 自定义参考信息
+$referenceItem = new Fedex\CustomerReferences();
+$referenceItem->setCustomerReferenceType(Fedex\CustomerReferences\CustomerReferenceType::CUSTOMER_REFERENCE);
+$referenceItem->setValue("amazon_1122334455");
+// 包装细节
 $packageLineItem = new Fedex\RequestedPackageLineItems();
 $packageLineItem->setWeight($weight);
+$packageLineItem->setCustomerReferences([$referenceItem]);
 $packageLineItems = [$packageLineItem];
 
 // 货物描述
