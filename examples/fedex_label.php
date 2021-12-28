@@ -90,6 +90,7 @@ $requestShipment->setRequestedPackageLineItems($packageLineItems);
 // 指定Smart Post发货详细信息
 if ($requestShipment->getServiceType() == Fedex\RequestedShipment\ServiceType::SMART_POST) {
     $smartPostInfoDetail = new Fedex\SmartPostInfoDetail();
+    $smartPostInfoDetail->setAncillaryEndorsement(Fedex\SmartPostInfoDetail\AncillaryEndorsement::ADDRESS_CORRECTION);
     $smartPostInfoDetail->setHubId("5531");
     $smartPostInfoDetail->setIndicia(Fedex\SmartPostInfoDetail\Indicia::PARCEL_SELECT);
     $requestShipment->setSmartPostInfoDetail($smartPostInfoDetail);
