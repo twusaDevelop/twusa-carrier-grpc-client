@@ -43,6 +43,8 @@ $req = new Rocket\CreateLabelRequest();
 $req->setCarrierAction($carrierAction);
 $req->setParams($labelParams);
 
+echo $req->serializeToJsonString();
+
 /**
  * @var Rocket\CreateLabelResponse $reply
  * @var Status $status
