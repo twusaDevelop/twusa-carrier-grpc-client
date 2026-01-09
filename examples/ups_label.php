@@ -26,43 +26,46 @@ $shipTo = new \Carrier\Ups\Location();
 //起始地
 $shipFrom = new \Carrier\Ups\Location();
 
-//付款方式
+//付款方式（二选一）
 // 1 预付费
 $payment = new \Carrier\Ups\Payment();
 $payment->setPaymentType(\Carrier\Ups\Payment\Type::PREPAID);
 $payment->setAccountNumber('1234567890');
+
 // 2 第三方平台支付
 $billAddr = new \Carrier\Ups\Address();
 $billAddr->setPostalCode('');
 $billAddr->setState('');
+$payment->setPaymentType(\Carrier\Ups\Payment\Type::THIRD_PARTY);
+$payment->setAccountNumber('1234567890');
 $payment->setAddress($billAddr);
 
 //包裹信息
-$package = new \Carrier\Ups\Package();
 
 $reference = new \Carrier\Ups\Reference();
 $reference->setValue('123');
-$package->setReferences([$reference]);
 
 $dimension = new \Carrier\Ups\Dimensions();
 $dimension->setLength(10.0);
 $dimension->setWidth(10.0);
 $dimension->setHeight(10.0);
 $dimension->setUnit(\Carrier\Ups\Unit::IN);
-$package->setDimensions($dimension);
 
 $weight = new \Carrier\Ups\Weight();
 $weight->setUnit(\Carrier\Ups\Unit::LBS);
 $weight->setValue(1.0);
-$package->setWeight($weight);
 
+$package = new \Carrier\Ups\Package();
+$package->setReferences([$reference]);
+$package->setDimensions($dimension);
+$package->setWeight($weight);
 $package->setType(\Carrier\Ups\PackageType::PACKAGE);
 
 //发货信息
 $shipment = new \Carrier\Ups\Shipment();
 $shipment->setLabelFormat(\Carrier\Ups\Shipment\LabelFormat::PNG);
 $shipment->setPackage($package);
-$shipment->setService(Carrier\Ups\Shipment\Service::GROUND);
+$shipment->setService(\Carrier\Ups\ServiceType::GROUND);
 $shipment->setShipper($shipper);
 $shipment->setShipFrom($shipFrom);
 $shipment->setShipTo($shipTo);
@@ -77,12 +80,12 @@ echo $req->serializeToJsonString();
  * @var \Carrier\Ups\CreateLabelResponse $reply
  * @var \Grpc\Status $status
  */
-list($reply, $status) = $client->CreateLabel($req, ['token' => '']);
+list($reply, $status) = $client->CreateLabel($req, metaData())->wait();
 if ($status->code != \Grpc\STATUS_OK) {
     echo "{$status->detail}\n";
-    $reply->getTrackingNumber();
     return;
 }
+echo "成功: {$reply->getTrackingNumber()}\n";
 
 function metaData()
 {

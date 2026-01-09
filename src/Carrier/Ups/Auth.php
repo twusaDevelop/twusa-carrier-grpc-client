@@ -27,10 +27,6 @@ class Auth extends \Google\Protobuf\Internal\Message
      * Generated from protobuf field <code>string access_license_number = 3;</code>
      */
     protected $access_license_number = '';
-    /**
-     * Generated from protobuf field <code>string account_number = 4;</code>
-     */
-    protected $account_number = '';
 
     /**
      * Constructor.
@@ -41,7 +37,6 @@ class Auth extends \Google\Protobuf\Internal\Message
      *     @type string $username
      *     @type string $password
      *     @type string $access_license_number
-     *     @type string $account_number
      * }
      */
     public function __construct($data = NULL) {
@@ -111,28 +106,6 @@ class Auth extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkString($var, True);
         $this->access_license_number = $var;
-
-        return $this;
-    }
-
-    /**
-     * Generated from protobuf field <code>string account_number = 4;</code>
-     * @return string
-     */
-    public function getAccountNumber()
-    {
-        return $this->account_number;
-    }
-
-    /**
-     * Generated from protobuf field <code>string account_number = 4;</code>
-     * @param string $var
-     * @return $this
-     */
-    public function setAccountNumber($var)
-    {
-        GPBUtil::checkString($var, True);
-        $this->account_number = $var;
 
         return $this;
     }

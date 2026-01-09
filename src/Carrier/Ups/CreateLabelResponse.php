@@ -21,6 +21,10 @@ class CreateLabelResponse extends \Google\Protobuf\Internal\Message
      * Generated from protobuf field <code>string tracking_number = 2;</code>
      */
     protected $tracking_number = '';
+    /**
+     * Generated from protobuf field <code>double total_charge = 3;</code>
+     */
+    protected $total_charge = 0.0;
 
     /**
      * Constructor.
@@ -30,6 +34,7 @@ class CreateLabelResponse extends \Google\Protobuf\Internal\Message
      *
      *     @type string $label
      *     @type string $tracking_number
+     *     @type float $total_charge
      * }
      */
     public function __construct($data = NULL) {
@@ -77,6 +82,28 @@ class CreateLabelResponse extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkString($var, True);
         $this->tracking_number = $var;
+
+        return $this;
+    }
+
+    /**
+     * Generated from protobuf field <code>double total_charge = 3;</code>
+     * @return float
+     */
+    public function getTotalCharge()
+    {
+        return $this->total_charge;
+    }
+
+    /**
+     * Generated from protobuf field <code>double total_charge = 3;</code>
+     * @param float $var
+     * @return $this
+     */
+    public function setTotalCharge($var)
+    {
+        GPBUtil::checkDouble($var);
+        $this->total_charge = $var;
 
         return $this;
     }

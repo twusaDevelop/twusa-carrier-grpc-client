@@ -33,6 +33,14 @@ class TrackActivity extends \Google\Protobuf\Internal\Message
      * Generated from protobuf field <code>string status_code = 5;</code>
      */
     protected $status_code = '';
+    /**
+     * Generated from protobuf field <code>string status_description = 6;</code>
+     */
+    protected $status_description = '';
+    /**
+     * Generated from protobuf field <code>string date = 7;</code>
+     */
+    protected $date = '';
 
     /**
      * Constructor.
@@ -45,6 +53,8 @@ class TrackActivity extends \Google\Protobuf\Internal\Message
      *     @type string $signed_for_by_name
      *     @type string $status_type
      *     @type string $status_code
+     *     @type string $status_description
+     *     @type string $date
      * }
      */
     public function __construct($data = NULL) {
@@ -158,6 +168,50 @@ class TrackActivity extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkString($var, True);
         $this->status_code = $var;
+
+        return $this;
+    }
+
+    /**
+     * Generated from protobuf field <code>string status_description = 6;</code>
+     * @return string
+     */
+    public function getStatusDescription()
+    {
+        return $this->status_description;
+    }
+
+    /**
+     * Generated from protobuf field <code>string status_description = 6;</code>
+     * @param string $var
+     * @return $this
+     */
+    public function setStatusDescription($var)
+    {
+        GPBUtil::checkString($var, True);
+        $this->status_description = $var;
+
+        return $this;
+    }
+
+    /**
+     * Generated from protobuf field <code>string date = 7;</code>
+     * @return string
+     */
+    public function getDate()
+    {
+        return $this->date;
+    }
+
+    /**
+     * Generated from protobuf field <code>string date = 7;</code>
+     * @param string $var
+     * @return $this
+     */
+    public function setDate($var)
+    {
+        GPBUtil::checkString($var, True);
+        $this->date = $var;
 
         return $this;
     }

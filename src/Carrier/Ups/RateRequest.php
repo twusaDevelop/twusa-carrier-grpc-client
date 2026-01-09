@@ -9,38 +9,34 @@ use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
 
 /**
- * Generated from protobuf message <code>ups.Shipment</code>
+ * Generated from protobuf message <code>ups.RateRequest</code>
  */
-class Shipment extends \Google\Protobuf\Internal\Message
+class RateRequest extends \Google\Protobuf\Internal\Message
 {
     /**
-     * Generated from protobuf field <code>.ups.Location shipper = 1;</code>
+     * Generated from protobuf field <code>.ups.Auth authorization = 1;</code>
+     */
+    protected $authorization = null;
+    /**
+     * Generated from protobuf field <code>.ups.Location shipper = 2;</code>
      */
     protected $shipper = null;
     /**
-     * Generated from protobuf field <code>.ups.Location ship_from = 2;</code>
+     * Generated from protobuf field <code>.ups.Location ship_from = 3;</code>
      */
     protected $ship_from = null;
     /**
-     * Generated from protobuf field <code>.ups.Location ship_to = 3;</code>
+     * Generated from protobuf field <code>.ups.Location ship_to = 4;</code>
      */
     protected $ship_to = null;
     /**
-     * Generated from protobuf field <code>.ups.Payment payment = 4;</code>
-     */
-    protected $payment = null;
-    /**
-     * Generated from protobuf field <code>.ups.ServiceType service = 6;</code>
+     * Generated from protobuf field <code>.ups.ServiceType service = 5;</code>
      */
     protected $service = 0;
     /**
-     * Generated from protobuf field <code>.ups.Package package = 7;</code>
+     * Generated from protobuf field <code>.ups.Package package = 6;</code>
      */
     protected $package = null;
-    /**
-     * Generated from protobuf field <code>.ups.Shipment.LabelFormat label_format = 8;</code>
-     */
-    protected $label_format = 0;
 
     /**
      * Constructor.
@@ -48,13 +44,12 @@ class Shipment extends \Google\Protobuf\Internal\Message
      * @param array $data {
      *     Optional. Data for populating the Message object.
      *
+     *     @type \Carrier\Ups\Auth $authorization
      *     @type \Carrier\Ups\Location $shipper
      *     @type \Carrier\Ups\Location $ship_from
      *     @type \Carrier\Ups\Location $ship_to
-     *     @type \Carrier\Ups\Payment $payment
      *     @type int $service
      *     @type \Carrier\Ups\Package $package
-     *     @type int $label_format
      * }
      */
     public function __construct($data = NULL) {
@@ -63,7 +58,39 @@ class Shipment extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>.ups.Location shipper = 1;</code>
+     * Generated from protobuf field <code>.ups.Auth authorization = 1;</code>
+     * @return \Carrier\Ups\Auth|null
+     */
+    public function getAuthorization()
+    {
+        return $this->authorization;
+    }
+
+    public function hasAuthorization()
+    {
+        return isset($this->authorization);
+    }
+
+    public function clearAuthorization()
+    {
+        unset($this->authorization);
+    }
+
+    /**
+     * Generated from protobuf field <code>.ups.Auth authorization = 1;</code>
+     * @param \Carrier\Ups\Auth $var
+     * @return $this
+     */
+    public function setAuthorization($var)
+    {
+        GPBUtil::checkMessage($var, \Carrier\Ups\Auth::class);
+        $this->authorization = $var;
+
+        return $this;
+    }
+
+    /**
+     * Generated from protobuf field <code>.ups.Location shipper = 2;</code>
      * @return \Carrier\Ups\Location|null
      */
     public function getShipper()
@@ -82,7 +109,7 @@ class Shipment extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>.ups.Location shipper = 1;</code>
+     * Generated from protobuf field <code>.ups.Location shipper = 2;</code>
      * @param \Carrier\Ups\Location $var
      * @return $this
      */
@@ -95,7 +122,7 @@ class Shipment extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>.ups.Location ship_from = 2;</code>
+     * Generated from protobuf field <code>.ups.Location ship_from = 3;</code>
      * @return \Carrier\Ups\Location|null
      */
     public function getShipFrom()
@@ -114,7 +141,7 @@ class Shipment extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>.ups.Location ship_from = 2;</code>
+     * Generated from protobuf field <code>.ups.Location ship_from = 3;</code>
      * @param \Carrier\Ups\Location $var
      * @return $this
      */
@@ -127,7 +154,7 @@ class Shipment extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>.ups.Location ship_to = 3;</code>
+     * Generated from protobuf field <code>.ups.Location ship_to = 4;</code>
      * @return \Carrier\Ups\Location|null
      */
     public function getShipTo()
@@ -146,7 +173,7 @@ class Shipment extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>.ups.Location ship_to = 3;</code>
+     * Generated from protobuf field <code>.ups.Location ship_to = 4;</code>
      * @param \Carrier\Ups\Location $var
      * @return $this
      */
@@ -159,39 +186,7 @@ class Shipment extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>.ups.Payment payment = 4;</code>
-     * @return \Carrier\Ups\Payment|null
-     */
-    public function getPayment()
-    {
-        return $this->payment;
-    }
-
-    public function hasPayment()
-    {
-        return isset($this->payment);
-    }
-
-    public function clearPayment()
-    {
-        unset($this->payment);
-    }
-
-    /**
-     * Generated from protobuf field <code>.ups.Payment payment = 4;</code>
-     * @param \Carrier\Ups\Payment $var
-     * @return $this
-     */
-    public function setPayment($var)
-    {
-        GPBUtil::checkMessage($var, \Carrier\Ups\Payment::class);
-        $this->payment = $var;
-
-        return $this;
-    }
-
-    /**
-     * Generated from protobuf field <code>.ups.ServiceType service = 6;</code>
+     * Generated from protobuf field <code>.ups.ServiceType service = 5;</code>
      * @return int
      */
     public function getService()
@@ -200,7 +195,7 @@ class Shipment extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>.ups.ServiceType service = 6;</code>
+     * Generated from protobuf field <code>.ups.ServiceType service = 5;</code>
      * @param int $var
      * @return $this
      */
@@ -213,7 +208,7 @@ class Shipment extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>.ups.Package package = 7;</code>
+     * Generated from protobuf field <code>.ups.Package package = 6;</code>
      * @return \Carrier\Ups\Package|null
      */
     public function getPackage()
@@ -232,7 +227,7 @@ class Shipment extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>.ups.Package package = 7;</code>
+     * Generated from protobuf field <code>.ups.Package package = 6;</code>
      * @param \Carrier\Ups\Package $var
      * @return $this
      */
@@ -240,28 +235,6 @@ class Shipment extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkMessage($var, \Carrier\Ups\Package::class);
         $this->package = $var;
-
-        return $this;
-    }
-
-    /**
-     * Generated from protobuf field <code>.ups.Shipment.LabelFormat label_format = 8;</code>
-     * @return int
-     */
-    public function getLabelFormat()
-    {
-        return $this->label_format;
-    }
-
-    /**
-     * Generated from protobuf field <code>.ups.Shipment.LabelFormat label_format = 8;</code>
-     * @param int $var
-     * @return $this
-     */
-    public function setLabelFormat($var)
-    {
-        GPBUtil::checkEnum($var, \Carrier\Ups\Shipment\LabelFormat::class);
-        $this->label_format = $var;
 
         return $this;
     }

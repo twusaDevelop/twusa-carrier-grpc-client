@@ -25,5 +25,21 @@ interface ServiceInterface
      */
     public function track(\Carrier\Ups\TrackRequest $request);
 
+    /**
+     * Method <code>rate</code>
+     *
+     * @param \Carrier\Ups\RateRequest $request
+     * @return \Carrier\Ups\RateResponse
+     */
+    public function rate(\Carrier\Ups\RateRequest $request);
+
+    /**
+     * Method <code>addressValidate</code>
+     *
+     * @param \Carrier\Ups\AddressValidateRequest $request
+     * @return \Carrier\Ups\AddressValidateResponse
+     */
+    public function addressValidate(\Carrier\Ups\AddressValidateRequest $request);
+
 }
 

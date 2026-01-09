@@ -44,4 +44,32 @@ class ServiceClient extends \Grpc\BaseStub {
         $metadata, $options);
     }
 
+    /**
+     * @param \Carrier\Ups\RateRequest $argument input argument
+     * @param array $metadata metadata
+     * @param array $options call options
+     * @return \Grpc\UnaryCall
+     */
+    public function Rate(\Carrier\Ups\RateRequest $argument,
+      $metadata = [], $options = []) {
+        return $this->_simpleRequest('/ups.Service/Rate',
+        $argument,
+        ['\Carrier\Ups\RateResponse', 'decode'],
+        $metadata, $options);
+    }
+
+    /**
+     * @param \Carrier\Ups\AddressValidateRequest $argument input argument
+     * @param array $metadata metadata
+     * @param array $options call options
+     * @return \Grpc\UnaryCall
+     */
+    public function AddressValidate(\Carrier\Ups\AddressValidateRequest $argument,
+      $metadata = [], $options = []) {
+        return $this->_simpleRequest('/ups.Service/AddressValidate',
+        $argument,
+        ['\Carrier\Ups\AddressValidateResponse', 'decode'],
+        $metadata, $options);
+    }
+
 }
